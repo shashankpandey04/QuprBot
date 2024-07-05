@@ -173,17 +173,13 @@ class Ticket(commands.Cog):
             await ctx.send("Embed Created!", ephemeral = True)
             canale = ctx.message.channel
             embed = discord.Embed(title ='', 
-                                description=f'''If you have any questions regarding,
-                                - Qupr Services
-                                - Development & Deployment
-                                - Customer Support
-                                - General queries, etc.
+                                description=f'''If you have any questions regarding,\n- Qupr Services\n- Development & Deployment\n- Customer Support\n- General queries, etc.
 
                                 Please feel free to open support ticket.
                                 ''', color = 0x2F3136)
             embed.set_author(name=ticketauthor, icon_url=f"{logoticket}")
             embed.set_footer(text=ticketfooterdev, icon_url=f'{logoticket}')
-            embed.set_image(url=f"{logoticket}")
+            embed.set_thumbnail(url=f"{logoticket}")
             await canale.send(embed = embed, view = ticket_bott())
             print(f"[Ticket Log] {Fore.LIGHTGREEN_EX}Ticket message created! [@{ctx.message.author} - #{canale}]{Style.RESET_ALL}")
 
