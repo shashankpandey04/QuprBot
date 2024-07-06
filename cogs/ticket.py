@@ -85,7 +85,7 @@ class confirm(discord.ui.View):
         try:
             await interaction.channel.delete()
         except:
-            await interaction.response.send_message("Errore permessi", ephemeral = True)
+            await interaction.response.send_message("Permission Error", ephemeral = True)
         
 class Aggiungi(ui.Modal, title='Add user'):
         utente = ui.TextInput(label='Enter the user id')
@@ -113,9 +113,8 @@ class Rimuovi(ui.Modal, title='Remove user'):
             await interaction.response.send_message(f'Removed {user.mention} to the ticket')
             canalelog = interaction.guild.get_channel(logticket)
             embed=discord.Embed(title="", description=f"**User:** {interaction.user.mention}\n**Action:** Removing user to ticket\n**Channel:** {interaction.channel.mention}\n**User**: {user.mention}", color=embedcolor)
-            embed.set_author(name='Log Bot', icon_url=f'{logoticket}')
+            embed.set_author(name='Qupr Digital', icon_url=f'{logoticket}')
             embed.set_footer(text=ticketfooterdev, icon_url=f'{logoticket}')
-
             await canalelog.send(embed=embed)
             print(f"[Ticket Log] {Fore.LIGHTBLUE_EX}User removed [@{interaction.user} #{interaction.channel.name} | Removed: @{user}] {Style.RESET_ALL}")
 

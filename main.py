@@ -36,13 +36,13 @@ class Bot(commands.Bot):
 bot = Bot()
 
 @bot.tree.command()
-async def channel(ctx, channel: discord.TextChannel):
+async def channel(interaction:discord.Interaction, channel: discord.TextChannel):
     '''Set the channel to monitor for tickets'''
     channel_id = channel.id
-    if any(role.id in ALLOWED_ROLE_IDS for role in ctx.author.roles):
+    if any(role.id in ALLOWED_ROLE_IDS for role in interaction.user.roles):
         global TICKET_CHANNEL_ID
         TICKET_CHANNEL_ID = channel_id
-        await ctx.send(f'Ticket channel set to {channel.mention}')
+        await interaction.response.send_message(f'Ticket channel set to {channel.mention}')
      
 bot.remove_command('help')
 bot.run(token)
