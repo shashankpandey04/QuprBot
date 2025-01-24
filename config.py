@@ -1,5 +1,5 @@
 #Discord Configs
-token = "MTI1NDczNzg0ODAwODE4MzgxMA.GmWeVt.JbEnqOUT9TMX-9kbJ26Eg5ZaPUYkzOIUPvY0OI"
+token = "MTI1NDczNzg0ODAwODE4MzgxMA.GmWeVt.JbEnqOUT9TMX-9kbJ26Eg5ZaPUYkzOIUPvY0OI" #Ofc it's fake
 staff_role = 1255043636958334986 #Staff role: Id of the discord role that will have access to read and write to tickets - Id del ruolo discord che avrà accesso a leggere e scrivere nei ticket 
 logticket = 1255047480391766099 #Log Ticket: Id of the channel where the logs will be sent - Id del canale dove verranno inviati i log
 
